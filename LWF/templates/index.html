@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>LWF Front page</title>
+   {% comment %} <link rel="stylesheet" href="{% static 'css/index.css' %}"> {% endcomment %}
+   <link rel="stylesheet" href="../static/css/index.css">
+</head>
+   <body>
+      <div class="banner_bg_main">
+         <div class="body" >
+            <div class="custom_menu">
+               <!-- logo -->
+               {% comment %} <!-- <li><a href="../../"><img src="{% static 'images/logo-ch2.png' %}"></a></li> --> {% endcomment %}
+               <li><a href=""><img src="../static/images/logo-ch2.png"></a></li>
+               <!-- 登入註冊 -->
+               <div class="login_menu" aria-hidden="true">
+                  <li>
+                        <a href="../../user/login" class="padding_10">登入</a>
+                  </li>
+                  <li>
+                        <a href="../../user/register" class="padding_10">註冊</a>
+                  </li>
+               </div>
+            </div>
+          </div>
+          <h1 class="banner_taital">想好 <br>要買什麼了嗎?</h1>
+          <form action="search/" method="get">
+            <div class="main">
+               <div class="input-group">
+                  <script>
+                        function handleKeyPress(event) {if (event.keyCode == 13) {alert('搜尋中，請稍後~');  }}
+                  </script>
+                  <input type="text" id="product" name="product" class="form-control" placeholder="搜尋" onkeydown="handleKeyPress(event)">
+                  <div class="input-group-append">
+                     
+                     <input class="btn btn-secondary" type="submit" style="background-color: #f26522; border-color:#f26522 " onclick="alert('搜尋中，請稍後~');"></onclick>
+                     <i class="fa fa-search"></i>
+                  </div>
+               </div>
+            </div>         
+         </form>
+      </div>
+   </body>
+</html>

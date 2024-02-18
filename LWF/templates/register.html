@@ -1,0 +1,56 @@
+{% extends "search-base.html" %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="zh=TW">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--連結css-->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <div class="logo"><a href="../"><img src="{% static 'images/logo-ch1.png' %}"></a></div>
+  </head>
+  <body>
+    <form action="" method="post">
+      {% csrf_token %}
+      <div class="modal-header">  
+        <h3>註冊</h3>
+      </div>
+  <!-- 姓名 -->
+      <div class="form-group">
+          <span class="title"><label id="姓名">姓名 :</label></span>
+          <input type="text" id="username" name="username" class="account form-control" placeholder="範例：王小明">
+      </div>
+      <!-- email -->
+      <div class="form-group">
+          <span class="title"><label id="Email">Email :</label></span>
+          <input type="email" id="email" name="email" class="account form-control" placeholder="範例：user@example.com">
+      </div>
+      <!-- password -->
+      <div class="form-group">
+          <span class="title"><label id="密碼">密碼 :</label></span>
+          <input type="password" id="password1" name="password1" class="password form-control" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <span class="title"><label id="確認密碼">確認密碼 :</label></span>
+        <input type="password" id="password2" name="password2" class="password form-control">
+    </div>
+      <!-- 性別 -->
+      <div class="form-group">
+          <span class="title"><label id="性別">性別 :</label></span>
+          <input type="radio" name="sex" value="male">男<input type="radio" name="sex" value="female">女
+        </div>
+      <!-- 生日 -->
+      <div class="form-group">
+        <span class="title"><label id="生日">生日 :</label></span>
+        <input type="date" id="birthday" name="birthday" class="account form-control">
+    </div>
+      <!-- 送出按鈕 -->
+      <input type="submit" class="btn btn-info"> 送出 </input>
+    </form>
+    {{message}}
+  </body>
+</html>
+
+{%endblock%}

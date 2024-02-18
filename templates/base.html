@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LWF</title>
+        <!-- style css -->
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+
+    </head>
+    <body>
+        <div class="body" >
+            <div class="custom_menu">
+                <!-- logo -->
+                <li><a href="../LWF/index"><img src="{% static 'images/logo-ch2.png' %}"></a></li>
+                <!-- 搜尋 -->
+                <div class="main" action="../LWF/search.html" method="get">
+                    <div class="input-group">
+                        <script>
+                            function handleKeyPress(event) {if (event.keyCode == 13) {alert('搜尋中，請稍後~');  }}
+                        </script>
+                        <input type="text" id="product" name="product" placeholder="搜尋" onkeydown="handleKeyPress(event)">
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary " type="submit" style="background-color: #f26522; border-color:#f26522 " onclick="alert('搜尋中，請稍後~');"></onclick>
+                        </div>
+                    </div>
+                </div>
+                <!-- 登入註冊 -->
+                <div class="login_menu" aria-hidden="true">
+                    <li>
+                        <a href="../login" class="padding_10">登入</a>
+                    </li>
+                    <li>
+                        <a href="../register" class="padding_10">註冊</a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

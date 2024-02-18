@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}
+代辦事項
+{% endblock %}
+
+{% block content %}
+<h1>Viewtodo</h1>
+<small>{{todo.created}}</small>
+<h2>{{todo.title}}</h2>
+代辦內容:<br>
+<p>
+    {{todo.text}}
+</p>
+{% if todo.completed %}
+<p>完成時間:{{todo.date_completed}}</p>
+
+{% endif %}
+
+
+<a href="{%url 'todo' %}"><u>返回</u></a>
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">更新</button>
+</form>
+{{message}}
+{% endblock %}

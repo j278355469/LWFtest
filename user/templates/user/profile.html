@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}
+個人頁面
+{% endblock %}
+
+{% block content %}
+<h1>profile</h1>
+{% if user.is_authenticated %}
+<ul>
+    <li>Email:{{user.email}}</li>
+    <li>Joined:{{user.date_joined}}</li>
+    <li>Lastlogin:{{user.last_login}}</li>
+</ul>
+{% else %}
+<h2> 請先登入或註冊...</h2>
+
+{% endif %}
+{% endblock %}

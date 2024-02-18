@@ -1,0 +1,40 @@
+body {
+    /*放入背景圖*/
+    background-image: url("../images/banner-bg.jpg");
+    /*背景致中*/
+    background-size: cover;
+    /*背景不重疊*/
+    background-attachment: fixed ;
+}
+.hot{
+    /*/*移動位子*/
+    position: center;
+    top: calc(30% - 175px);
+    left: calc(50% - 50px);
+    /*底部顏色*/
+    background-color: rgba(255, 179, 0, 0.464);
+    /*底部大小*/
+    padding: 25px;
+    /*圓弧狀*/
+    border-radius: 30px;
+    /*字體大小*/
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.Eventdiscounts{
+    /*移動位子*/
+    position: center;
+    top: calc(60% - 257px);
+    left: calc(42% - 100px);
+    /*底部顏色*/
+    background-color: rgba(242, 214, 149, 0.4);
+    /*底部大小*/
+    padding: 100px;
+    /*圓弧狀*/
+    border-radius: 30px;
+    /*字體大小*/
+    font-size: 25px;
+}

@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container" style="background-color: #FFFFFF; border-color:#FFFFFF ">
+   <hr>
+   <p class="subtitle is-4">搜尋: {{product}}</p>
+   <p class="subtitle is-4">共 {{ results|length }} 項商品</p>
+   
+   <div class="product-list">
+      {% for result in results %}
+         <div class="product hover-effect">
+            <a href="{{ result.link }}" target="_blank">
+               <img src="{{ result.pic }}" alt="{{ result.title }}">
+            </a>
+            <h5><div class="product-title">{{ result.title }}</div></h5>
+            <div class="product-price">NT${{ result.price }}</div>
+            <nav class="level">
+               <div class="level-left">
+                  <div class="level-item">
+                     <a href="{{ result.link }}" class="button is-warning" target="_blank">商品詳情</a>
+                  </div>
+               </div>
+               <div class="level-right">
+                  {% comment %} <form method="POST"> {% endcomment %}
+                     <input type="hidden" name="product_id" value="add_to_cart">
+                     <input type="submit" name="add_to_cart" value="追蹤" onclick="if (confirm('是否追蹤商品？')) { action = './log in.html'; } else { alert('取消'); }">
+                  {% comment %} </form> {% endcomment %}
+               </div>
+            </nav>
+         </div>
+      {% endfor %}
+   </div>
+</div>
+{% endblock %}
+     
+         {% comment %} <div class="product hover-effect">
+            <a href="../html/6529468">
+               <img src="http://diz36nn4q02zr.cloudfront.net/webapi/imagesV3/Cropped/SalePage/6529468/0/637973753679270000?v=1" alt="【PS5】胡鬧廚房！全都好吃 (原譯：煮過頭 吃到飽)《中文版》">
+            </a>
+            <h5><div class="product-title">【PS5】胡鬧廚房！全都好吃 (原譯：煮過頭 吃到飽)《中文版》</div></h5>
+            <div class="product-price">NT$880</div>
+            <nav class="level">
+               <div class="level-left">
+                     <div class="level-item">
+                        <a href="./html" class="button is-warning">商品詳情</a>
+                     </div>
+               </div>
+               <div class="level-right">
+                     <form method="POST">
+                        <input type="hidden" name="product_id" value="add_to_cart">
+                        <input type="submit" name="add_to_cart" value="追蹤" onclick="if (confirm('是否追蹤商品？')) { action = './log in.html'; } else { alert('取消'); }">
+                     </form>
+               </div>
+            </nav>
+         </div>
+         <div class="product hover-effect">
+            <a href="../html/6529468">
+               <img src="http://diz36nn4q02zr.cloudfront.net/webapi/imagesV3/Cropped/SalePage/6529468/0/637973753679270000?v=1" alt="【PS5】胡鬧廚房！全都好吃 (原譯：煮過頭 吃到飽)《中文版》">
+            </a>
+            <h5><div class="product-title">【PS5】胡鬧廚房！全都好吃 (原譯：煮過頭 吃到飽)《中文版》</div></h5>
+            <div class="product-price">NT$880</div>
+            <nav class="level">
+               <div class="level-left">
+                     <div class="level-item">
+                        <a href="./html" class="button is-warning">商品詳情</a>
+                     </div>
+               </div>
+               <div class="level-right">
+                     <form method="POST">
+                        <input type="hidden" name="product_id" value="add_to_cart">
+                        <input type="submit" name="add_to_cart" value="追蹤" onclick="if (confirm('是否追蹤商品？')) { action = './log in.html'; } else { alert('取消'); }">
+                     </form>
+               </div>
+            </nav>
+         </div>
+         <div class="product hover-effect">
+            <a href="../html/6529468">
+               <img src="http://diz36nn4q02zr.cloudfront.net/webapi/imagesV3/Cropped/SalePage/6529468/0/637973753679270000?v=1" alt="【PS5】胡鬧廚房！全都好吃 (原譯：煮過頭 吃到飽)《中文版》">
+            </a>
+            <h5><div class="product-title">【PS5】胡鬧廚房！全都好吃 (原譯：煮過頭 吃到飽)《中文版》</div></h5>
+            <div class="product-price">NT$880</div>
+            <nav class="level">
+               <div class="level-left">
+                     <div class="level-item">
+                        <a href="./html" class="button is-warning">商品詳情</a>
+                     </div>
+               </div>
+               <div class="level-right">
+                     <form method="POST">
+                        <input type="hidden" name="product_id" value="add_to_cart">
+                        <input type="submit" name="add_to_cart" value="追蹤" onclick="if (confirm('是否追蹤商品？')) { action = './log in.html'; } else { alert('取消'); }">
+                     </form>
+               </div>
+            </nav>
+         </div>
+         <div class="product hover-effect">
+            <a href="../html/6529468">
+               <img src="http://diz36nn4q02zr.cloudfront.net/webapi/imagesV3/Cropped/SalePage/6529468/0/637973753679270000?v=1" alt="【PS5】胡鬧廚房！全都好吃 (原譯：煮過頭 吃到飽)《中文版》">
+            </a>
+            <h5><div class="product-title">【PS5】胡鬧廚房！全都好吃 (原譯：煮過頭 吃到飽)《中文版》</div></h5>
+            <div class="product-price">NT$880</div>
+            <nav class="level">
+               <div class="level-left">
+                     <div class="level-item">
+                        <a href="./html" class="button is-warning">商品詳情</a>
+                     </div>
+               </div>
+               <div class="level-right">
+                     <form method="POST">
+                        <input type="hidden" name="product_id" value="add_to_cart">
+                        <input type="submit" name="add_to_cart" value="追蹤" onclick="if (confirm('是否追蹤商品？')) { action = './log in.html'; } else { alert('取消'); }">
+                     </form>
+               </div>
+            </nav>
+         </div>
+         <div class="product hover-effect">
+            <a href="../html/6529468">
+               <img src="http://diz36nn4q02zr.cloudfront.net/webapi/imagesV3/Cropped/SalePage/6529468/0/637973753679270000?v=1" alt="【PS5】胡鬧廚房！全都好吃 (原譯：煮過頭 吃到飽)《中文版》">
+            </a>
+            <h5><div class="product-title">【PS5】胡鬧廚房！全都好吃 (原譯：煮過頭 吃到飽)《中文版》</div></h5>
+            <div class="product-price">NT$880</div>
+            <nav class="level">
+               <div class="level-left">
+                     <div class="level-item">
+                        <a href="./html" class="button is-warning">商品詳情</a>
+                     </div>
+               </div>
+               <div class="level-right">
+                     <form method="POST">
+                        <input type="hidden" name="product_id" value="add_to_cart">
+                        <input type="submit" name="add_to_cart" value="追蹤" onclick="if (confirm('是否追蹤商品？')) { action = './log in.html'; } else { alert('取消'); }">
+                     </form>
+               </div>
+            </nav>
+         </div>
+         <div class="product hover-effect">
+            <a href="../html/6529468">
+               <img src="http://diz36nn4q02zr.cloudfront.net/webapi/imagesV3/Cropped/SalePage/6529468/0/637973753679270000?v=1" alt="【PS5】胡鬧廚房！全都好吃 (原譯：煮過頭 吃到飽)《中文版》">
+            </a>
+            <h5><div class="product-title">【PS5】胡鬧廚房！全都好吃 (原譯：煮過頭 吃到飽)《中文版》</div></h5>
+            <div class="product-price">NT$880</div>
+            <nav class="level">
+               <div class="level-left">
+                     <div class="level-item">
+                        <a href="./html" class="button is-warning">商品詳情</a>
+                     </div>
+               </div>
+               <div class="level-right">
+                     <form method="POST">
+                        <input type="hidden" name="product_id" value="add_to_cart">
+                        <input type="submit" name="add_to_cart" value="追蹤" onclick="if (confirm('是否追蹤商品？')) { action = './log in.html'; } else { alert('取消'); }">
+                     </form>
+               </div>
+            </nav>
+         </div>
+         <div class="product hover-effect">
+            <a href="../html/6529468">
+               <img src="http://diz36nn4q02zr.cloudfront.net/webapi/imagesV3/Cropped/SalePage/6529468/0/637973753679270000?v=1" alt="【PS5】胡鬧廚房！全都好吃 (原譯：煮過頭 吃到飽)《中文版》">
+            </a>
+            <h5><div class="product-title">【PS5】胡鬧廚房！全都好吃 (原譯：煮過頭 吃到飽)《中文版》</div></h5>
+            <div class="product-price">NT$880</div>
+            <nav class="level">
+               <div class="level-left">
+                     <div class="level-item">
+                        <a href="./html" class="button is-warning">商品詳情</a>
+                     </div>
+               </div>
+               <div class="level-right">
+                     <form method="POST">
+                        <input type="hidden" name="product_id" value="add_to_cart">
+                        <input type="submit" name="add_to_cart" value="追蹤" onclick="if (confirm('是否追蹤商品？')) { action = './log in.html'; } else { alert('取消'); }">
+                     </form>
+               </div>
+            </nav>
+         </div>
+   </div>
+</div> {% endcomment %}
+   

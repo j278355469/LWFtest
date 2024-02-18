@@ -1,0 +1,46 @@
+{% extends "search-base.html" %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="zh=TW">
+  <head>
+      <title>登入</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--連結css-->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <div class="logo">
+        <a href=""><img src="{% static 'images/logo-ch1.png' %}"></a>
+      </div>
+  </head>
+  <body>
+    <form action="../../" method="post">
+      {% csrf_token %}
+      <div class="modal-header">  
+        <h3>會員登入</h3>
+      </div>
+      <!-- username -->
+      <div class="form-group">
+        <input type="text" name="username" value="" id="username" class="account form-control" placeholder="Email" required>
+      </div>
+      <!-- password -->
+      <div class="form-group">
+        <input type="password" name="password" value="" id="password" class="password form-control" placeholder="Password" required>
+      </div>
+      <!-- 送出按鈕 -->
+      <input type="submit" class="btn btn-info"> 登入 </input>
+      <!--Forgot password-->
+      <div class="form-group">
+        <a href="../../myapp/Forgot password" type="button" class="member"> <h4>忘記密碼</h4> </a>
+      </div>
+      <!-- Footer -->
+      <div class="signup">
+        <span>尚未成為會員</span>
+        <a href="register.html" type="button" class="member"> 立即加入   </a>
+      </div>
+    </form>
+  </body>
+</html>
+
+{%endblock%}

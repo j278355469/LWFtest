@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}
+完成代辦事項
+{% endblock %}
+
+{% block content %}
+<h1>Todolist</h1>
+{%if not todos%}
+<h3>目前無代辦事項</h3>
+{%else%}
+{%for todo in todos%}
+{%if todo.completed %}
+
+<ul>
+    <li>
+        <h3 {%if todo.important%}style="color: red;" {%endif%}>
+            <a href="{% url 'viewtodo' todo.id %}">
+                {%if todo.completed %}
+                <s>{{todo.title}}</s>
+                {%else%}
+                {{todo.title}}
+                {% endif %}
+            </a>
+
+            <a href="{% url 'deletetodo' todo.id %}" style="background-color: red">刪除</a>
+        </h3>
+    </li>
+
+    <li>{{todo.created}}</li>
+
+</ul>
+{%endif%}
+{%endfor%}
+{%endif%}
+{% endblock %}

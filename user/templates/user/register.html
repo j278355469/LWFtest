@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}
+註冊頁面
+{% endblock %}
+{% block content %}
+<h1>Register </h1>
+<form action="" method="POST">
+    <body>
+        <form action="" method="post">
+          {% csrf_token %}
+          <div class="modal-header">  
+        
+          </div>
+      <!-- 姓名 -->
+          <div class="form-group">
+              <span class="title"><label id="姓名">姓名 :</label></span>
+              <input type="text" id="username" name="username" class="account form-control" placeholder="範例：王小明">
+          </div>
+          <!-- email -->
+          <div class="form-group">
+              <span class="title"><label id="Email">Email :</label></span>
+              <input type="email" id="email" name="email" class="account form-control" placeholder="範例：user@example.com">
+          </div>
+          <!-- password -->
+          <div class="form-group">
+              <span class="title"><label id="密碼">密碼 :</label></span>
+              <input type="password" id="password1" name="password1" class="password form-control" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <span class="title"><label id="確認密碼">確認密碼 :</label></span>
+            <input type="password" id="password2" name="password2" class="password form-control">
+        </div>
+          <!-- 性別 -->
+          <div class="form-group">
+              <span class="title"><label id="性別">性別 :</label></span>
+              <input type="radio" name="sex" value="male">男<input type="radio" name="sex" value="female">女
+            </div>
+          <!-- 生日 -->
+          <div class="form-group">
+            <span class="title"><label id="生日">生日 :</label></span>
+            <input type="date" id="birthday" name="birthday" class="account form-control">
+        </div>
+          <!-- 送出按鈕 -->
+          <input type="submit" class="btn btn-info"> 送出 </input>
+        </form>
+        {{message}}
+      </body>
+    </html>
+{% endblock %}
