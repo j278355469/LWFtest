@@ -1,0 +1,110 @@
+/* 比價商品 */
+.big-frame {
+        width: 900px;/*寬*/
+        /* padding: 5px;高 */
+        margin: 20px;/*由左往右 20px*/
+        display: flex;
+        align-items: center; /* 水平對齊 */
+}
+.left-frame {
+    /* border: 10px solid rgb(255, 196, 0); */
+    height: 150px;
+    width: 150px;
+    /* 背景重複 */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.right-frame { 
+    width:740px;
+    height:150px;
+    /* border: 10px solid rgb(255, 196, 0); */
+    /* margin-left:10%; */
+  /* css注释：对divcss5-right设置float:right即可让对象靠右浮动 */ 
+}
+
+.image-box{
+    width: 75%;
+    aspect-ratio: 16/9;
+    /* 額外確保圖片縮放時會有最好的效果 */
+    object-fit: contain; /* 或 contain cover*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-title {
+    font-size: 10px; 
+    color: black;
+    /* border: 3px solid #000; 3px 寬度的黑色實線邊框 */
+    background-color: #f0f0f0; /* 背景色 */
+    /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  */
+    /* 陰影效果 */
+}
+
+/* 項目的容器 */
+.parity-item {
+    display: flex;
+    width: 730px;/*寬*/
+    /* border: 5px solid rgb(0, 0, 255); */
+    align-items: center; /* 水平對齊 */
+}
+
+.box-item{
+  width:150px;
+  height:65px;
+  display: flex;
+  margin: 20px auto; /* 用于居中显示 */
+  /* border: 1px dashed #000; */
+   /* 使用1像素的虚线，可以根据需要调整颜色和样式 */
+  /* border: 5px solid rgb(0, 255, 119); */
+  /* margin-left:10%; */
+/* css注释：对divcss5-right设置float:right即可让对象靠右浮动 */ 
+}
+
+  /* 商標的樣式 */
+  .item-img {
+    height: 25px;
+    /* aspect-ratio: 16/9; */
+    /* 保持比例 */
+    /* 額外確保圖片縮放時會有最好的效果 */
+    object-fit: contain; /* 或 contain cover*/
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* border: 5px solid rgb(255, 0, 157); */
+  }
+
+    /* 價格的樣式 */
+.item-price {
+    /* font-size: 18px;  */
+    /* 根據需要調整 */
+    color: #e44d26; /* 根據需要調整 */
+    /* border: 5px solid rgb(0, 17, 255); */
+    position: relative;
+    /* bottom: 10px;  */
+    /* 調整數值以達到你想要的效果 */
+}
+
+.item-line {
+    border-right: 1px dashed #000; /* 只在右侧添加虚线 */
+    height: 100%;
+}
+
+/* 價格標籤 */
+.price-tag {
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 5px; 
+    margin-bottom: 20px; /* 調整數值以達到你想要的效果 */
+}
+
+/* 商店名稱 */
+.store-name {
+    color: red; /* 根據需要調整顏色 */
+}
+
+
+  
+
+  
+
+  

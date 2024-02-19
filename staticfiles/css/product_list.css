@@ -1,0 +1,29 @@
+.card {
+    width: 288px;
+    align-items: center;
+    display: -webkit-inline-flex;
+    justify-content: space-between;
+    margin: 2 auto;
+ }
+
+ .product {
+    width: 20%;
+    margin: 1%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    vertical-align: top;
+    transition: transform 0.3s ease; /* 悬停效果的过渡 */
+ }
+ .hover-effect:hover {
+    transform: scale(1.1); /* 鼠标悬停时放大容器 */
+ }
+ .product-title {
+    height: 48px;
+    margin-bottom: 50px; /* 添加底部外边距，以与产品价格分隔 */
+ }
+
+ .product-price {
+    color: red;
+    margin-top: 50px; /* 添加顶部外边距，以与产品名称分隔 */
+ }

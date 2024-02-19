@@ -1,0 +1,10 @@
+django
+gunicorn
+django-heroku
+selenium
+threading
+time
+re
+pandas
+schedule
+bs4

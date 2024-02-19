@@ -1,0 +1,71 @@
+body {
+    /*放入背景圖*/
+    background-image: url("../images/banner-bg.jpg");
+    /*背景致中*/
+    background-size: cover;
+    /*背景不重疊*/
+    background-attachment: fixed ;
+}
+
+form{
+  /*調整登入位子*/
+  position: fixed;
+  left: 20%;
+  /*底部透明*/
+  background-color: rgba(242, 214, 149, 0.4);
+  /*白底向外延伸*/
+  padding: 20px;
+  /*圓弧狀*/
+  border-radius: 18px;
+
+
+  position: fixed;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -70%);
+}
+
+.modal-header h3{
+  /*字體大小*/
+  font-size: 30px;
+  /*字體顏色*/
+  color: rgb(30, 96, 210);
+  /*文字置中*/
+  text-align: center;
+}
+.form-group{
+  /*間距*/
+  margin: 30px;  
+}
+.account, .password{
+  /*圓弧狀*/
+  border-radius: 18px;
+  /*字體大小*/
+  font-size: 20px;
+}
+.btn{
+  /*字體大小*/
+  font-size: 20px;
+  /*長度*/
+  width: 100%;
+  /*底部顏色*/
+  background-color: rgb(72, 142, 234);
+  /*字體顏色*/
+  color: #ffffff;
+  /*去邊框*/
+  border: none;
+  /*滑鼠變手*/
+  cursor: pointer;
+}
+/*文字置中*/
+.member h4, .signup{
+  text-align: center;
+}
+#kwd{
+  /*字體大小*/
+  font-size: 18px;
+  /*字體顏色*/
+  color: #413eea;
+  /*字體加粗*/
+  font-weight: bold;
+}
