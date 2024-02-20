@@ -27,6 +27,7 @@ urlpatterns = [
     path('', views.ex_index, name = 'ex_index'), #首頁
 
     path('search/', views.search, name="search"), #搜尋
+    
 
     
 

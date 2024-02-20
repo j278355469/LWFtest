@@ -1,27 +1,10 @@
 
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
 from django.db import connection
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.common.by import By
-from django.http import HttpResponseRedirect
-from django .contrib.auth.decorators import login_required
-# from django.shortcuts import render_to_response
-from bs4 import BeautifulSoup
-
 import pandas as pd
-import requests
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
-from django.contrib import auth
-import io
 from LWF import store1
 import threading
-import schedule
+
 
 
 # Create your views here.
