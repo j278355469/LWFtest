@@ -9,15 +9,19 @@ import time
 import re
 import pandas as pd
 import schedule
-import json
+import os
+
 
 class store():
     
     def __init__(self):
-        self.options = Options()
+        self.options = webdriver.ChromeOptions()
+        self.options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
         self.options.add_argument("--headless")
+        self.options.add_argument("--disable-dev-shm-usage")
+        self.options.add_argument("--no-sandbox")
 
-        self.browser = webdriver.Chrome(options=self.options)
+        self.browser = driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=self.options)
         
     def title_check(self,product,title):
         products=product.split(" ")
