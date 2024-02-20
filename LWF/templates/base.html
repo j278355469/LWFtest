@@ -41,21 +41,21 @@
     <div class="line-top" >
         <div class="custom_menu">
             <!-- logo -->
-            <li><a href="LWF/index"><img src="{% static 'images/logo-ch2.png' %}"></a></li>
+            <li><a href="../../"><img src="{% static 'images/logo-ch2.png' %}"></a></li>
             <!-- 搜尋 -->
-            <from action="LWF/search.html" method="get">
-                <div class="main">
-                    <div class="input-group">
-                        <script>
-                            function handleKeyPress(event) {if (event.keyCode == 13) {alert('搜尋中，請稍後~');  }}
-                        </script>
-                        <input type="text" id="product" name="product" placeholder="搜尋" onkeydown="handleKeyPress(event)">
-                        <div class="input-group-append">
-                        <input class="btn btn-secondary " type="submit" style="background-color: #f26522; border-color:#f26522 " onclick="alert('搜尋中，請稍後~');"></onclick>
-                        </div>
-                    </div>
+            <form action="../../search" method="get">
+                <div class="main" >
+                      <div class="input-group">
+                          <script>
+                                function handleKeyPress(event) {if (event.keyCode == 13) {alert('搜尋中，請稍後~');  }}
+                          </script>
+                          <input type="text" id="product" name="product" placeholder="搜尋" onkeydown="handleKeyPress(event)">
+                          <div class="input-group-append">
+                              <button class="btn btn-secondary " type="submit" style="background-color: #f26522; border-color:#f26522 " onclick="alert('搜尋中，請稍後~');"></onclick>
+                          </div>
+                      </div>
                 </div>
-            </from>
+            </form>
             <!-- 登入註冊 -->
             <div class="login_menu">
                 <ul>
@@ -77,7 +77,7 @@
                    </li>
                    {% endif %}
                 </ul>
-             </div>
+            </div>
         </div>
     </div>
     {% block content %}

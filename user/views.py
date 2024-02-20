@@ -54,8 +54,8 @@ def register(request):
         password1 = request.POST["password1"]
         password2 = request.POST["password2"]
         email = request.POST["email"]
-        sex=request.POST["sex"]
-        birthday=request.POST["birthday"]
+        # sex=request.POST["sex"]
+        # birthday=request.POST["birthday"]
         
 
         print(username, password1, password2)
@@ -70,8 +70,8 @@ def register(request):
                 user = User.objects.create_user(username=username,
                                                 password=password1,
                                                 email=email,
-                                                sex=sex,
-                                                birthday=birthday
+                                                # sex=sex,
+                                                # birthday=birthday
                                                 )
                 user.save()
                 message = "註冊成功"
