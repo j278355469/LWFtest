@@ -1,0 +1,28 @@
+.Inner-container {
+    display: flex;
+    flex-direction: row;
+    /* Horizontal layout */
+    background-color: rgb(243, 237, 237);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.left {
+    flex: 1;
+    /* Takes up 1/2 of the available space */
+    padding: 20px;
+}
+
+.right {
+    flex: 1;
+    /* Takes up 1/2 of the available space */
+    padding: 20px;
+}
+
+.line {
+    border-top: 1px solid #ccc;
+}
+.subtitle is-5{
+    
+
+}
