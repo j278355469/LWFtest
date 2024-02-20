@@ -39,7 +39,7 @@ def user_login(request):
                 else:
                     login(request, user)
                     message = "登入成功!"
-                    return redirect("todo")
+                    return redirect("../../")
 
         print(user)
 
