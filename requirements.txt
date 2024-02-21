@@ -3,3 +3,4 @@ gunicorn==20.1.0
 django-heroku
 selenium
 bs4
+pandas
