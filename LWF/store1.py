@@ -1,5 +1,6 @@
 import os
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from bs4 import BeautifulSoup
 import time
 import re
@@ -16,8 +17,8 @@ class store():
         self.options.add_argument("--headless")
         self.options.add_argument("--disable-dev-shm-usage")
         self.options.add_argument("--no-sandbox")
-
-        self.browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=self.options)
+        self.service=Service(executable_path=os.environ.get("CHROMEDRIVER_PATH"))
+        self.browser = webdriver.Chrome(service=self.service, options=self.options)
         
     def title_check(self,product,title):
         products=product.split(" ")
