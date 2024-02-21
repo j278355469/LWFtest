@@ -1,7 +1,7 @@
 
 from django.shortcuts import render, redirect
 from django.db import connection
-import pandas as pd
+
 from LWF import store1
 import threading
 
