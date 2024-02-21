@@ -12,11 +12,19 @@ conn = connection.cursor()
 
 def dataCrawl(product):
     results = []
-    store1.store().PC(product,results)
-    store1.store().Carrefour (product,results)
-    store1.store().momo(product,results)
-    store1.store().Poya(product,results)
+    pc24_thread = threading.Thread(target=store1.store().PC,args = (product,results))
+    cf_thread = threading.Thread(target=store1.store().Carrefour,args = (product,results))
+    momo_thread = threading.Thread(target=store1.store().momo,args = (product,results))
+    poya_thread = threading.Thread(target=store1.store().Poya,args = (product,results))
 
+    pc24_thread.start()
+    cf_thread.start()
+    momo_thread.start()
+    poya_thread.start()
+    pc24_thread.join()
+    cf_thread.join()
+    momo_thread.join()
+    poya_thread.join()
     results_df=pd.DataFrame(results)
         
     results_df.index = results_df.index + 1
