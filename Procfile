@@ -1,1 +1,1 @@
-web:gunicorn todolist.wsgi --log-file -
+web:gunicorn tobuylist.wsgi --log-file -
