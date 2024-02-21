@@ -17,7 +17,7 @@ class store():
         self.options.add_argument("--disable-dev-shm-usage")
         self.options.add_argument("--no-sandbox")
 
-        self.browser = driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=self.options)
+        self.browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=self.options)
         
     def title_check(self,product,title):
         products=product.split(" ")
